@@ -8,9 +8,23 @@ sans-serif;
 font-family: 'Poppins',
 sans-serif;
 */
+:root{
+--black:#171718;
+--orange: #f2d70a;
+--black-border:#26292D;
+--white:#fff;
+
+--dark-bg:var(--black);
+--dark-border:var(--black-border);
+--header-links:var(--white);
+--accent:var(--orange);
+--text-color:var(--black)
+}
 
 html, body{
     font-family: 'DM Sans', sans-serif;
+    letter-spacing: -0.5px;
+    color: var(--text-color);
 }
 
 .container{
@@ -21,9 +35,11 @@ html, body{
 /*======Nav=======*/
 .nav{
 padding: 20px 0;
-border-bottom: 1px solid #26292D;;
-background-color: #171718;
-color: #fff;
+border-bottom: 1px solid var(--dark-border);
+background-color: var(--black);
+color: var(--header-links);
+letter-spacing: normal;
+
 }
 .nav-row{
     display: flex;
@@ -35,7 +51,7 @@ color: #fff;
 
 }
 .logo{
-color: #fff;
+color: var(--header-links);
 font-size: 24px;
 font-family: 'Poppins',sans-serif;
 }
@@ -46,13 +62,95 @@ font-family: 'Poppins',sans-serif;
         
 }
 .nav-list {
-
+display: flex;
+align-items: center;
+font-size: 16px;
+column-gap: 40px;
+font-weight: 500;
+font-family: 'Poppins', sans-serif;
+color: var(--header-links);
 }
 
-.nav-list__item {
 
-}
 
 .nav-list__link {
+color: var(--header-links);
+}
+.nav-list__link--active{
+    position: relative;
+}
+.nav-list__link--active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color:var(--orange);
+}
+/*=======Header=====================*/
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 695px;
+    padding: 40px 0;
+    background-color: var(--dark-bg);
+    color: var(--header-links);
+
+}
+
+.header__wrapper {
+    padding: 0 15px;
+    min-width: 660px;
+}
+
+.header_title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.4;
+    margin-bottom: 20px;
     
+}
+.header_title strong{
+    font-weight: 700;
+    font-size: 50px;
+}
+.header_title em{
+    font-style: normal;
+    color: var(--accent);
+}
+
+.header__text {
+    margin-bottom: 40px;
+    font-size: 18px;
+    line-height: 1.333;
+}
+.header__text p +p{
+    margin-top: 1em;
+}
+
+.btn {
+    display: inline-block;
+    height: 48px;
+    padding: 12px 28px;
+    border-radius: 5px;
+    background-color: var(--accent);
+    color: var(--black);
+    letter-spacing: 0.15px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: opacity 0.2s ease-in;
+}
+
+.btn:hover{
+    opacity: 0.6;
+    /*background-color: rgb(99, 99, 100);
+    color: var(--white);*/
+}
+.btn:active{
+    position: relative;
+    top: 1px;
 }
