@@ -12,7 +12,7 @@ sans-serif;
 --black:#171718;
 --orange: #f2d70a;
 --black-border:#26292D;
---white:#fff;
+--white:#dddada;
 
 --dark-bg:var(--black);
 --dark-border:var(--black-border);
@@ -75,7 +75,12 @@ color: var(--header-links);
 
 .nav-list__link {
 color: var(--header-links);
+transition: opacity 0.2s ease-in;
 }
+.nav-list__link:hover{
+    opacity: 0.6;
+}
+
 .nav-list__link--active{
     position: relative;
 }
@@ -98,6 +103,10 @@ color: var(--header-links);
     min-height: 695px;
     padding: 40px 0;
     background-color: var(--dark-bg);
+    background-image: url(../img/Abstract.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center center;
     color: var(--header-links);
 
 }
