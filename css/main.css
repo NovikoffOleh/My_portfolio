@@ -38,6 +38,7 @@ html, body{
 .none{
     display: none !important;
 }
+
 /*======Nav=======*/
 .nav{
 padding: 20px 0;
@@ -193,9 +194,11 @@ text-align: center;
 
 .projects {
 display: flex;
+justify-content: center;
 flex-wrap: wrap;
 column-gap: 30px;
 row-gap: 30px;
+
 }
 
 .project {
@@ -261,7 +264,6 @@ color: var(--orange);
     flex-direction: column;
     align-items: center;
     row-gap: 27px;
-    
 }
 
 .social {
@@ -331,11 +333,39 @@ margin-top: 0.5em;
  }
 
  @media (max-width: 620px) {
+    .header{
+        min-height: unset;
+    }
     .header_title {
-        font-size: 30px;
+        font-size: 26px;
     }
         .header_title strong {
             font-size: 40px;
         }
- }
+        .section{
+            padding: 40px 0;
+        }
+        .title-1 {
+            margin-bottom: 30px;
+            font-size: 40px;
+                    
+        }
+        .project__title {
+            font-size: 20px;
+                    
+        }
+        .footer{
+            padding: 40px 0 30px;
+        }
+        .social__item{
+            width: 28px;
+        }
+        .social {
+            column-gap: 20px;
+            
+        }
+        .footer__wrapper {
+            row-gap: 20px;
+        }
+}
 
