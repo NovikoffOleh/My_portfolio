@@ -72,6 +72,7 @@ display: flex;
 align-items: center;
 font-size: 16px;
 column-gap: 40px;
+row-gap: 10px;
 font-weight: 500;
 font-family: 'Poppins', sans-serif;
 color: var(--header-links);
@@ -327,5 +328,14 @@ margin-top: 0.5em;
  .btn-outline:active {
      position: relative;
      top: 1px;
+ }
+
+ @media (max-width: 620px) {
+    .header_title {
+        font-size: 30px;
+    }
+        .header_title strong {
+            font-size: 40px;
+        }
  }
 
