@@ -182,7 +182,8 @@ margin-bottom: 60px;
 font-size: 60px;
 font-weight: 700;
 line-height: 1.3;
-color: var(--black);
+/*color: var(--black);*/
+color: #4040e8;
 text-align: center;
 }
 
