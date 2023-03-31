@@ -50,7 +50,7 @@ letter-spacing: normal;
 }
 .nav-row{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     column-gap: 30px;
     row-gap: 20px;
@@ -58,6 +58,7 @@ letter-spacing: normal;
 
 }
 .logo{
+margin-right: auto;
 color: var(--header-links);
 font-size: 24px;
 font-family: 'Poppins',sans-serif;
@@ -170,6 +171,39 @@ transition: opacity 0.2s ease-in;
 .btn:active{
     position: relative;
     top: 1px;
+}
+/*==== DARK theme =======*/
+.dark-mode-btn {
+order: 9;
+position: relative;
+display: flex;
+justify-content: space-between;
+padding: 5px;
+width: 51px;
+height: 26px;
+background-color: var(--black-border);
+border-radius: 50px;
+}
+.dark-mode-btn::before{
+    position: absolute;
+    top: 1px;
+    left: 1px;
+
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: var(--white);
+    transition: left 0.22s ease-in;
+}
+
+.dark-mode-btn__icon{
+position: relative;
+z-index: 9;
+}
+.dark-mode-btn--active::before{
+left: 26px;
 }
 
 /*===== Projects ============================*/
@@ -380,6 +414,12 @@ margin-top: 0.5em;
         .project-details__desc{
             font-size: 20px;
             margin-bottom: 16px;
+        }
+        .nav-row{
+         justify-content: space-between;  
+        }
+        .dark-mode-btn{
+            order: 0;
         }
 }
 
