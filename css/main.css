@@ -426,6 +426,9 @@ html, body {
 .copyright p + p {
     margin-top: 0.5em;
 }
+.name{
+        color: var(--accent);
+}
 
 @media (max-width: 620px) {
 
