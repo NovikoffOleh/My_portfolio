@@ -435,6 +435,75 @@ html, body {
         color: var(--accent);
 }
 
+/* Modal Popap */
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(150, 148, 148, 0.7);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.4s ease 0s;
+}
+
+
+.popup:target{
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup:target .popup__content{
+    transform:  perspective(600px) translate(0px, 0%) rotateX(0deg);
+    opacity: 1;
+}
+
+.popup__area{
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0; 
+}
+
+.popup__body {
+    display: flex;
+    min-height: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+}
+
+.popup__content {
+    position: relative;
+    max-width: 800px;
+    background-color: white;
+    color: var(--dark-bg);
+    padding: 30px;
+    opacity: 0;
+    transition: all 0.4s ease 0s;
+    transform: perspective(600px) translate(0px, -100%) rotateX(45deg) ;
+}
+
+.popup__close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--dark-bg);
+}
+
+.popup__title {
+    font-size: 40px;
+    margin: 0px 0px 1em 0px;
+}
+
+.popup__text {}
+
 @media (max-width: 620px) {
 
     /* Header  */
@@ -521,3 +590,5 @@ html, body {
     }
 
 }
+
+
