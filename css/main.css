@@ -292,7 +292,7 @@ html, body {
     display: flex;
     column-gap: 10px;
     align-items: center;
-
+    margin-bottom: 20px;
     height: 48px;
     padding: 12px 20px;
 
@@ -365,7 +365,7 @@ html, body {
 
 .project-details__desc {
     margin-bottom: 30px;
-
+    
     font-weight: 700;
     font-size: 24px;
     line-height: 1.3;
