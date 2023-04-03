@@ -320,7 +320,8 @@ html, body {
 
 .projects {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    
     flex-wrap: wrap;
     column-gap: 30px;
     row-gap: 30px;
@@ -331,6 +332,7 @@ html, body {
     background-color: var(--project-card-bg);
     box-shadow: var(--box-shadow);
     border-radius: 10px;
+    
 }
 
 .project__img {
